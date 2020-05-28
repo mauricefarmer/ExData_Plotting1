@@ -24,6 +24,6 @@ hist(household_power_consumption$Global_active_power, main = "Global Active Powe
      xlab = "Global Active Power (kilowatts)", ylab = "Frequency", col = "red")
 
 # save to file
-dev.copy(png, "plot1.png")
+dev.copy(png, "plot1.png", height = 480, width = 480)
 dev.off()
 
