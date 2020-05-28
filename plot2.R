@@ -23,7 +23,7 @@ names(household_power_consumption) <- unlist(strsplit(header_Names, ";"))
 # create a single datetime column in POSIXct format
 household_power_consumption$datetime = paste(household_power_consumption$Date, household_power_consumption$Time)
 
-household_power_consumption$datetime <- ymd_hms(household_power_consumption$datetime)
+household_power_consumption$datetime <- dmy_hms(household_power_consumption$datetime)
 
 # draw histogram of Global Active Power 
 with(household_power_consumption, plot(datetime, Global_active_power, 
